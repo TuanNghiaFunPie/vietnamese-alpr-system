@@ -1,0 +1,20 @@
+# ALPR Configuration
+# Default settings for the Vietnamese License Plate Recognition system.
+
+models:
+  plate_detector: "models/final_best.pt"
+  char_recognizer: "models/final_char_yolo.pt"
+
+thresholds:
+  plate_confidence: 0.4
+  char_confidence: 0.3
+
+postprocessing:
+  # Fraction of plate crop height used as Y-axis threshold to split rows
+  y_threshold_ratio: 0.25
+
+visualization:
+  plate_box_color: [0, 255, 0]     # BGR: Green
+  char_box_color: [255, 0, 0]      # BGR: Blue
+  text_color: [0, 255, 0]          # BGR: Green
+  box_thickness: 3
